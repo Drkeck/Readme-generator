@@ -56,38 +56,62 @@ const init = () => {
         {   //usage section.
             type: 'input',
             name: 'usage',
-            message:'usage placeholder',
+            message:'Explain how to use the App and what it problem it can solve'
         },
         {
             //liscense picker
             type: 'list',
             name: 'liscense',
             message: 'Which liscense is your project protected under',
-            choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'Unlicense']
+            choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'Unlicense'],
+            validate: lisInput => {
+                if(lisInput) {
+                    return true;
+                } else {
+                    console.log('please pick a liscense. \n "unlicensed" is avalible');
+                    return false;
+                }
+            }
         },
         {
             //contributing / contributers
             type: 'input',
             name:'contributing',
-            message:'Leave some information of contributing.'
+            message:'Who contributed to the project, OR how can others contribute to the project..'
         },
         {
             //tests???
             type: 'input',
             name: 'tests',
-            message:'leave info about tests',
+            message:'Explain the tests you ran with this code. (would be wise to add images after generation)',
         },
         {
             //github username
             type:'input',
             name:'github',
-            message: 'Enter a github for the pourpouse of contacting'
+            message: 'Enter a github for the pourpouse of contacting',
+            validate: gituser => {
+                if (gituser) {
+                    return true;
+                } else {
+                    console.log('please enter a github user');
+                    return false;
+                }
+            }
         },
         {
             //contact email
             type: 'input',
             name: 'email',
-            message: 'Please Enter an email that users can use to contact you.'
+            message: 'Please Enter an email that users can use to contact you.',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log('please enter an email');
+                    return false;
+                }
+            }
         }
 
     ])
@@ -96,14 +120,15 @@ const init = () => {
 // function call to initialize program
 init()
     .then(readmeData => {
+        console.log(readmeData);
         return genrateFile(readmeData);
     })
-    .then(ReadmeMarkDown => {
-        return writeToFile(ReadmeMarkDown);
-    })
-    .then(writeToFileResponse => {
-        console.log(writeToFileResponse);
-    })
-    .catch(err => {
-        console.log(err);
-    })
+    // .then(ReadmeMarkDown => {
+    //     return writeToFile(ReadmeMarkDown);
+    // })
+    // .then(writeToFileResponse => {
+    //     console.log(writeToFileResponse);
+    // })
+    // .catch(err => {
+    //     console.log(err);
+    // })
