@@ -9,7 +9,7 @@ const init = () => {
             //project name
             type: 'input',
             name: 'name',
-            message: 'Whats the name of the project',
+            message: 'Whats the name of the project :',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
