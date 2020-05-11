@@ -36,6 +36,6 @@ feel free to add pictures and videos to the README to give it a litte more visua
 
 ![README IN Folder](./utils/images/image_2.jpg)
 
-## Get In Contact
+## Contact
 Contact [Drkeck](https://www.github.com/drkeck) if you have any questions,
 or you can contact me by [Email.](k3ck3ly.a@gmail.com)
