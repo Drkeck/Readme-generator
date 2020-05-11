@@ -2,17 +2,20 @@
 function generateMarkdown(data) {
   return `
   # ${data.name}
+  ![license](http://img.shields.io/badge/license-${data.liscense}-blue.svg)
 
   ${data.description}
 
 
   ## table of contents
   
-  * [Installation]()
-  * [Usage]()
-  * [Credits]()
-  * [Liscense]()
-  * [Tests]()
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Credits](#credits)
+  * [Contribute](#contribute)
+  * [Tests](#tests)
+  * [Contact](#contact)
 
 
   ## Installation
@@ -27,10 +30,16 @@ function generateMarkdown(data) {
 
   ## License
 
-  ${data.liscense}
+
+  This application is covered under [${data.liscense}](.LICENSE.txt)
 
 
   ## Credits
+
+  ${data.credits}
+
+
+  ## contribute
 
   ${data.contributing}
 

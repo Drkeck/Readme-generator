@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const writeToFile = require('./utils/writeToFile');
+const writeFile = require('./utils/writeToFile');
 const genrateFile = require('./utils/generateMarkdown');
 // array of questions for user
 const questions = [
@@ -63,7 +63,7 @@ const init = () => {
             type: 'list',
             name: 'liscense',
             message: 'Which liscense is your project protected under',
-            choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'Unlicense'],
+            choices: ['GNU_AGPLv3', 'GNU_GPLv3', 'GNU_LGPLv3', 'Mozilla_Public_License_2.0', 'Apache_License_2.0', 'MIT_License', 'Boost_Software_License_1.0', 'Unlicense'],
             validate: lisInput => {
                 if(lisInput) {
                     return true;
@@ -74,13 +74,19 @@ const init = () => {
             }
         },
         {
+            //credits
+            type: 'input',
+            name: 'credits',
+            message: 'Who was appart of this project? or what outside help did you have developing this project?'
+        },
+        {
             //contributing / contributers
             type: 'input',
             name:'contributing',
-            message:'Who contributed to the project, OR how can others contribute to the project..'
+            message:'how would you like others to contribut to the project?'
         },
         {
-            //tests???
+            //tests
             type: 'input',
             name: 'tests',
             message:'Explain the tests you ran with this code. (would be wise to add images after generation)',
@@ -123,12 +129,12 @@ init()
         console.log(readmeData);
         return genrateFile(readmeData);
     })
-    // .then(ReadmeMarkDown => {
-    //     return writeToFile(ReadmeMarkDown);
-    // })
-    // .then(writeToFileResponse => {
-    //     console.log(writeToFileResponse);
-    // })
-    // .catch(err => {
-    //     console.log(err);
-    // })
+    .then(ReadmeMarkDown => {
+        return writeFile(ReadmeMarkDown);
+    })
+    .then(writeToFileResponse => {
+        console.log(writeToFileResponse);
+    })
+    .catch(err => {
+        console.log(err);
+    })
