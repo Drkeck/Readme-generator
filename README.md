@@ -30,7 +30,7 @@ Enter all Relevent information to your project!
 
 Many of the questions are geared twoard how you can present your project if you don't already have an idea.
 
-after you fill out all the info a README will be created in the completed folder with all the info you provided!
+after you fill out all the info a README will be created in the Completed folder with all the info you provided!
 
 feel free to add pictures and videos to the README to give it a litte more visual flare!
 

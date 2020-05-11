@@ -112,7 +112,6 @@ const init = () => {
 // function call to initialize program
 init()
     .then(readmeData => {
-        console.log(readmeData);
         return genrateFile(readmeData);
     })
     .then(ReadmeMarkDown => {
