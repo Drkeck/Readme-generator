@@ -1,12 +1,11 @@
 
   # README Geneorator
   
-Welcome to my very own readme generator, i wanted to establish a polished / professional look. It took a few itterations to get everything right, and even with that i had to cut some things out.
+Welcome to my very own readme generator, i wanted to establish a polished / professional look. It took a few itterations to get everything right, and even with that i had to cut some things out.I personally think it turned out great and would like to continue to work on it.
 
 ![bashImage](./utils/images/image_1.jpg)
 
-I personally think it turned out great and would like to continue to work on it.
-  ## table of contents
+  ## Table of contents
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contact](#contact)
@@ -37,6 +36,6 @@ feel free to add pictures and videos to the README to give it a litte more visua
 
 ![README IN Folder](./utils/images/image_2.jpg)
 
-## get in contact
+## Get In Contact
 Contact [Drkeck](https://www.github.com/drkeck) if you have any questions,
 or you can contact me by [Email.](k3ck3ly.a@gmail.com)
