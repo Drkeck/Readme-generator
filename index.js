@@ -1,20 +1,6 @@
 const inquirer = require('inquirer');
 const writeFile = require('./utils/writeToFile');
 const genrateFile = require('./utils/generateMarkdown');
-// array of questions for user
-const questions = [
-//project name
-//project description
-//table of contents (links to lower sections of the readme.md [look into it.])
-//installation
-//usage
-//liscense (use a badge to display which & a notice is added to the readme)
-//contributing
-//tests
-//questions (Github Username & Email address)
-
-];
-
 // function to initialize program
 const init = () => {
 
@@ -28,7 +14,7 @@ const init = () => {
                 if (nameInput) {
                     return true;
                 } else {
-                    console.log('please enter project name');
+                    console.log('please enter project name :');
                     return false;
                 }
             }
@@ -37,7 +23,7 @@ const init = () => {
             //description
             type: 'input',
             name: 'description',
-            message: 'Enter a description of your project',
+            message: 'Enter a description of your project :',
             validate: descriptionInput => {
                 if (descriptionInput) {
                     return true;
@@ -56,7 +42,7 @@ const init = () => {
         {   //usage section.
             type: 'input',
             name: 'usage',
-            message:'Explain how to use the App and what it problem it can solve'
+            message:'Explain how to use the App:'
         },
         {
             //liscense picker
